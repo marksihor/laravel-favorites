@@ -2,6 +2,7 @@
 
 namespace MarksIhor\LaravelFavorites;
 
+use Illuminate\Database\Eloquent\Model;
 use MarksIhor\LaravelFavorites\Favorite;
 
 trait Favoriteable
@@ -25,7 +26,7 @@ trait Favoriteable
         foreach ($favoritesGroupedByType as $type => $favorites) {
             $favoritesIds = $favorites->pluck('favorite_id');
 
-            $result[config('favorites.types')[$type]] = $type::whereIn('id', $favoritesIds)->get();
+            $result[config('favorites.types')[$type]] = $type::withoutGlobalScopes(config('favorites.without_scopes', []))->whereIn('id', $favoritesIds)->get();
         }
 
         return $result;
