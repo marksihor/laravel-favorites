@@ -1,6 +1,6 @@
 <?php
 
-namespace MarksIhor\LaravelMessaging;
+namespace MarksIhor\LaravelFavorites;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,6 +14,6 @@ class FavoritesServiceProvider extends ServiceProvider
 
         $this->publishes([
             \dirname(__DIR__) . '/migrations/' => database_path('migrations'),
-        ], 'migrations');
+        ], 'favorites-migrations');
     }
 }
