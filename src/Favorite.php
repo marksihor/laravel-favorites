@@ -1,6 +1,6 @@
 <?php
 
-namespace MarksIhor\LaravelMessaging\Models;
+namespace MarksIhor\LaravelFavorites;;
 
 use Illuminate\Database\Eloquent\Model;
 
