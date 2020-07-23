@@ -1,0 +1,24 @@
+{
+    "name": "marksihor/laravel-favorites",
+    "description": "Laravel Favorites Package.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ihor Korotkyi",
+            "email": "marks.ihor@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarksIhor\\LaravelFavorites\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["MarksIhor\\LaravelFavorites\\FavoritesServiceProvider"]
+        }
+    }
+}
